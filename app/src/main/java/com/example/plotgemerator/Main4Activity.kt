@@ -5,33 +5,33 @@ import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
 import android.view.inputmethod.InputMethodManager
-import android.widget.TextView
 import android.widget.Button
+import android.widget.TextView
 import java.lang.Exception
 
-class Main2Activity : AppCompatActivity() {
+class Main4Activity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_main2)
+        setContentView(R.layout.activity_main4)
 
-        val txtshow = findViewById<TextView>(R.id.txtShow)
-        val btnBack = findViewById<Button>(R.id.btnBack)
+        val txtview = findViewById<TextView>(R.id.txtView)
+        val btnHome = findViewById<Button>(R.id.btnHome)
 
-        var charShow: String = intent.getStringExtra("SendChar")
-        var thingShow: String = intent.getStringExtra("SendThing")
-        var fuckShow: String = intent.getStringExtra("SendFuck")
-        txtshow.text ="Plot: ${charShow} wants ${thingShow}, but is opposed by ${fuckShow}."
+        var pCharShow: String = intent.getStringExtra("SendPlotChara")
+        var pThingShow: String = intent.getStringExtra("SendPlotThing")
+        var pFuckShow: String = intent.getStringExtra("SendPlotFuck")
+        txtview.text ="Plot: ${pCharShow} wants ${pThingShow}, but is opposed by ${pFuckShow}."
 
-        btnBack.setOnClickListener(View.OnClickListener {
-            this.finish() })
+        btnHome.setOnClickListener{
+            this.finish() }
+
 
         findViewById<View>(android.R.id.content).setOnTouchListener { _, event ->
             hideKeyboard()
             false
         }
     }
-
     fun hideKeyboard() {
         try {
             val imm = getSystemService(Context.INPUT_METHOD_SERVICE) as InputMethodManager

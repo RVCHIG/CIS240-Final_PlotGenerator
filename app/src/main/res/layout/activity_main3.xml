@@ -5,36 +5,35 @@
         xmlns:app="http://schemas.android.com/apk/res-auto"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        tools:context=".Main2Activity">
+        tools:context=".Main3Activity">
 
-    <TextView
-            android:text="TextView"
+    <Button
+            android:text="Home"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:id="@+id/btnHome"
+            app:layout_constraintEnd_toEndOf="parent" app:layout_constraintTop_toTopOf="@+id/toolbar"
+            app:layout_constraintStart_toStartOf="parent" android:layout_marginLeft="16dp"
+            app:layout_constraintBottom_toBottomOf="@+id/toolbar" android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp" android:layout_marginRight="16dp"/>
+    <Button
+            android:text="Generate Plot"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:id="@+id/txtShow"
+            android:id="@+id/btnRandom"
+            android:layout_marginTop="173dp"
             app:layout_constraintEnd_toEndOf="parent" app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintStart_toStartOf="parent" android:layout_marginLeft="8dp"
-            android:layout_marginStart="8dp" app:layout_constraintBottom_toBottomOf="parent"
-            android:layout_marginEnd="8dp" android:layout_marginRight="8dp"/>
+            android:layout_marginStart="8dp" android:layout_marginEnd="8dp" android:layout_marginRight="8dp"/>
     <android.support.v7.widget.Toolbar
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:background="?attr/colorPrimary"
             android:theme="?attr/actionBarTheme"
             android:minHeight="?attr/actionBarSize"
-            android:id="@+id/toolbar2"
-            app:layout_constraintEnd_toEndOf="parent"
-            android:layout_marginBottom="3dp" app:layout_constraintStart_toStartOf="parent"
+            android:id="@+id/toolbar" app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginBottom="1dp" app:layout_constraintStart_toStartOf="parent"
             android:layout_marginLeft="8dp" android:layout_marginStart="8dp"
             app:layout_constraintBottom_toBottomOf="parent" android:layout_marginEnd="8dp"
             android:layout_marginRight="8dp"/>
-    <Button
-            android:text="Home"
-            android:layout_width="348dp"
-            android:layout_height="0dp"
-            android:id="@+id/btnBack"
-            app:layout_constraintStart_toEndOf="@+id/toolbar2" app:layout_constraintHorizontal_bias="0.5"
-            app:layout_constraintEnd_toStartOf="@+id/toolbar2" app:layout_constraintTop_toTopOf="@+id/toolbar2"
-            android:layout_marginTop="4dp" app:layout_constraintBottom_toBottomOf="parent"
-            android:layout_marginBottom="3dp"/>
 </android.support.constraint.ConstraintLayout>
